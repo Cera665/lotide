@@ -29,4 +29,4 @@ const letterPositions = (sentence) => {
   return results;
 };
 
-console.log(assertArraysEqual(letterPositions("hello").e, [1]));
+console.log(assertArraysEqual(letterPositions("hello").e, [1])); //does this 1 refer to index?
