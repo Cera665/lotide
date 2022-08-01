@@ -1,5 +1,5 @@
-const head = require('./head');
-const assertEqual = require('./assertEqual');
+const head = require('../head');
+const assertEqual = require('../assertEqual');
 
 console.log(head([1, 2, 3]));  // should return 1 (not an array with 1 in it)
 console.log(head([1])); //should return the first element even if it's lonely
