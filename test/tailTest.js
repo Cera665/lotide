@@ -1,7 +1,9 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-console.log(tail(words));
-console.log(assertEqual(words.length, 3));
-console.log(words);
+describe("#tail", () => {
+  it("returns the array less the first element", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+  
+});
