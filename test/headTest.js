@@ -1,9 +1,24 @@
 const head = require('../head');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-console.log(head([1, 2, 3]));  // should return 1 (not an array with 1 in it)
-console.log(head([1])); //should return the first element even if it's lonely
-console.log(head([])); // should return undefined because it's empty
+describe("#head", () => {
+  it("returns 1 for [1, 2, 3]", () => {
+    assert.strictEqual(head([1, 2, 3]), 1);
+  });
+});
 
-console.log(assertEqual(head([5,6,7]), 5));
-console.log(assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"));
+it("returns '5' for ['5']", () => {
+  assert.strictEqual(head(['5']), '5');
+});
+
+it("returns 1 and not [1]", () => {
+  assert.strictEqual(head([1, 2, 3]), 1);
+});
+
+it("returns the first element even if there is only one element", () => {
+  assert.strictEqual(head([1]), 1);
+});
+
+it("returns undefined when given an empty array", () => {
+  assert.strictEqual(head([]), undefined);
+});
